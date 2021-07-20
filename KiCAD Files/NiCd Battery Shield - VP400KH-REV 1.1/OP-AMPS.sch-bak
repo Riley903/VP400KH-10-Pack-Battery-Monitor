@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 2 4
 Title "OP-AMPS"
-Date "2021-04-16"
-Rev "1"
+Date "2021-06-24"
+Rev "1.1"
 Comp ""
 Comment1 ""
 Comment2 ""

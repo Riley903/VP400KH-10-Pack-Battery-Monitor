@@ -5,28 +5,14 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 3 4
 Title "MICROCONTROLLER"
-Date "2021-04-16"
-Rev "1"
+Date "2021-06-24"
+Rev "1.1"
 Comp ""
 Comment1 ""
 Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Switch:SW_Push SW?
-U 1 1 607C35A1
-P 4200 2500
-AR Path="/607C35A1" Ref="SW?"  Part="1" 
-AR Path="/607B886A/607C35A1" Ref="SW?"  Part="1" 
-AR Path="/60829CC7/607C35A1" Ref="SW1"  Part="1" 
-F 0 "SW1" H 4200 2785 50  0000 C CNN
-F 1 "RESET" H 4200 2694 50  0000 C CNN
-F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 4200 2700 50  0001 C CNN
-F 3 "~" H 4200 2700 50  0001 C CNN
-	1    4200 2500
-	1    0    0    -1  
-$EndComp
 Text GLabel 4600 4600 0    50   Input ~ 0
 SDA
 Text GLabel 4600 4700 0    50   Input ~ 0
@@ -135,24 +121,6 @@ Wire Wire Line
 	6000 5200 5900 5200
 Wire Wire Line
 	5900 5300 6000 5300
-$Comp
-L power:GND #PWR?
-U 1 1 607C35E7
-P 3900 2500
-AR Path="/607C35E7" Ref="#PWR?"  Part="1" 
-AR Path="/607B886A/607C35E7" Ref="#PWR?"  Part="1" 
-AR Path="/60829CC7/607C35E7" Ref="#PWR05"  Part="1" 
-F 0 "#PWR05" H 3900 2250 50  0001 C CNN
-F 1 "GND" V 3900 2300 50  0000 C CNN
-F 2 "" H 3900 2500 50  0001 C CNN
-F 3 "" H 3900 2500 50  0001 C CNN
-	1    3900 2500
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3900 2500 4000 2500
-Wire Wire Line
-	4400 2500 4700 2500
 Wire Wire Line
 	4600 4600 4700 4600
 Wire Wire Line
@@ -261,4 +229,100 @@ Text GLabel 4600 4400 0    50   Input ~ 0
 STATUS_CHECK
 Wire Wire Line
 	4600 4400 4700 4400
+Wire Wire Line
+	9000 3900 8900 3900
+Wire Wire Line
+	8900 3800 9000 3800
+Wire Wire Line
+	9000 3700 8900 3700
+Wire Wire Line
+	8900 3600 9000 3600
+Wire Wire Line
+	9000 3500 8900 3500
+Wire Wire Line
+	8900 3400 9000 3400
+$Comp
+L power:GND #PWR?
+U 1 1 60C9F7DF
+P 8900 3400
+AR Path="/60C9F7DF" Ref="#PWR?"  Part="1" 
+AR Path="/607CEECB/60C9F7DF" Ref="#PWR?"  Part="1" 
+AR Path="/6086926A/60C9F7DF" Ref="#PWR?"  Part="1" 
+AR Path="/60829CC7/60C9F7DF" Ref="#PWR012"  Part="1" 
+F 0 "#PWR012" H 8900 3150 50  0001 C CNN
+F 1 "GND" V 8900 3200 50  0000 C CNN
+F 2 "" H 8900 3400 50  0001 C CNN
+F 3 "" H 8900 3400 50  0001 C CNN
+	1    8900 3400
+	0    1    1    0   
+$EndComp
+Text GLabel 8900 3500 0    50   Input ~ 0
+5V
+Text GLabel 8900 3900 0    50   Input ~ 0
+CS
+Text GLabel 8900 3800 0    50   Input ~ 0
+SCK
+Text GLabel 8900 3700 0    50   Input ~ 0
+MOSI
+Text GLabel 8900 3600 0    50   Input ~ 0
+MISO
+Wire Wire Line
+	8900 2750 9000 2750
+Wire Wire Line
+	9000 2850 8900 2850
+Wire Wire Line
+	8900 2950 9000 2950
+Wire Wire Line
+	9000 3050 8900 3050
+Text GLabel 8900 3050 0    50   Input ~ 0
+SCL
+Text GLabel 8900 2950 0    50   Input ~ 0
+SDA
+$Comp
+L power:GND #PWR?
+U 1 1 60C9F7F0
+P 8900 2750
+AR Path="/60C9F7F0" Ref="#PWR?"  Part="1" 
+AR Path="/607CEECB/60C9F7F0" Ref="#PWR?"  Part="1" 
+AR Path="/6086926A/60C9F7F0" Ref="#PWR?"  Part="1" 
+AR Path="/60829CC7/60C9F7F0" Ref="#PWR011"  Part="1" 
+F 0 "#PWR011" H 8900 2500 50  0001 C CNN
+F 1 "GND" V 8905 2622 50  0000 R CNN
+F 2 "" H 8900 2750 50  0001 C CNN
+F 3 "" H 8900 2750 50  0001 C CNN
+	1    8900 2750
+	0    1    1    0   
+$EndComp
+Text GLabel 8900 2850 0    50   Input ~ 0
+5V
+$Comp
+L Connector_Generic:Conn_01x04 J?
+U 1 1 60C9F7F7
+P 9200 2850
+AR Path="/60C9F7F7" Ref="J?"  Part="1" 
+AR Path="/607CEECB/60C9F7F7" Ref="J?"  Part="1" 
+AR Path="/6086926A/60C9F7F7" Ref="J?"  Part="1" 
+AR Path="/60829CC7/60C9F7F7" Ref="J14"  Part="1" 
+F 0 "J14" H 9280 2842 50  0000 L CNN
+F 1 "LCD" H 9280 2751 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 9200 2850 50  0001 C CNN
+F 3 "~" H 9200 2850 50  0001 C CNN
+	1    9200 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 60C9F7FD
+P 9200 3600
+AR Path="/60C9F7FD" Ref="J?"  Part="1" 
+AR Path="/607CEECB/60C9F7FD" Ref="J?"  Part="1" 
+AR Path="/6086926A/60C9F7FD" Ref="J?"  Part="1" 
+AR Path="/60829CC7/60C9F7FD" Ref="J15"  Part="1" 
+F 0 "J15" H 9150 3900 50  0000 L CNN
+F 1 "SD CARD" V 9300 3400 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 9200 3600 50  0001 C CNN
+F 3 "~" H 9200 3600 50  0001 C CNN
+	1    9200 3600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
