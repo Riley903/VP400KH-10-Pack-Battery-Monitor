@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name NiCd-Battery-Tester-PCB-Rev-3-rescue)(type Legacy)(uri "C:/Users/riley/OneDrive/Desktop/NiCd Battery Project/NiCd Battery Tester Rev 3/NiCd Battery Tester Rev 3/NiCd Battery Tester PCB Rev 3-rescue.lib")(options "")(descr ""))
+  (lib (name "NiCd Battery Tester")(type Legacy)(uri "C:/Users/riley/OneDrive/Desktop/NiCd Battery Project/NiCd Battery Tester Rev 3/NiCd Battery Tester Rev 3/NiCd Battery Tester.lib")(options "")(descr ""))
+)

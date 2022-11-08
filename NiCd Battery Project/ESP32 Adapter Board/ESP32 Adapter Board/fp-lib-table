@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "ESP32 Adapter Board")(type KiCad)(uri "${KIPRJMOD}/ESP32 Adapter Board.pretty")(options "")(descr ""))
+  (lib (name "NiCd Battery Tester")(type KiCad)(uri "C:/Users/riley/OneDrive/Desktop/NiCd Battery Project/NiCd Battery Tester Rev 3/NiCd Battery Tester Rev 3/NiCd Battery Tester.pretty")(options "")(descr ""))
+)
