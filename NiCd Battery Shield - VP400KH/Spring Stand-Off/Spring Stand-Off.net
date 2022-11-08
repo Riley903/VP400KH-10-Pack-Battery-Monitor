@@ -1,0 +1,61 @@
+(export (version D)
+  (design
+    (source "C:\\Users\\riley\\OneDrive\\Desktop\\NiCd Battery Project\\NiCd Battery Shield - VP400KH\\Spring Stand-Off\\Spring Stand-Off.sch")
+    (date "2021-06-08 2:56:07 PM")
+    (tool "Eeschema (5.1.6)-1")
+    (sheet (number 1) (name /) (tstamps /)
+      (title_block
+        (title)
+        (company)
+        (rev)
+        (date 2021-06-08)
+        (source "Spring Stand-Off.sch")
+        (comment (number 1) (value ""))
+        (comment (number 2) (value ""))
+        (comment (number 3) (value ""))
+        (comment (number 4) (value "")))))
+  (components
+    (comp (ref J1)
+      (value "KEYSTONE 240")
+      (footprint "NiCd Battery Tester:KEYSTONE_240")
+      (datasheet ~)
+      (libsource (lib Connector_Generic) (part Conn_01x01) (description "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 60BFE7EF))
+    (comp (ref H1)
+      (value M4)
+      (footprint MountingHole:MountingHole_4mm_Pad_Via)
+      (datasheet ~)
+      (libsource (lib Mechanical) (part MountingHole_Pad) (description "Mounting Hole with connection"))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 60BFEFCC)))
+  (libparts
+    (libpart (lib Connector_Generic) (part Conn_01x01)
+      (description "Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)")
+      (docs ~)
+      (footprints
+        (fp Connector*:*_1x??_*))
+      (fields
+        (field (name Reference) J)
+        (field (name Value) Conn_01x01))
+      (pins
+        (pin (num 1) (name Pin_1) (type passive))))
+    (libpart (lib Mechanical) (part MountingHole_Pad)
+      (description "Mounting Hole with connection")
+      (docs ~)
+      (footprints
+        (fp MountingHole*Pad*))
+      (fields
+        (field (name Reference) H)
+        (field (name Value) MountingHole_Pad))
+      (pins
+        (pin (num 1) (name 1) (type input)))))
+  (libraries
+    (library (logical Connector_Generic)
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Connector_Generic.lib"))
+    (library (logical Mechanical)
+      (uri "C:\\Program Files\\KiCad\\share\\kicad\\library/Mechanical.lib")))
+  (nets
+    (net (code 1) (name "Net-(H1-Pad1)")
+      (node (ref J1) (pin 1))
+      (node (ref H1) (pin 1)))))

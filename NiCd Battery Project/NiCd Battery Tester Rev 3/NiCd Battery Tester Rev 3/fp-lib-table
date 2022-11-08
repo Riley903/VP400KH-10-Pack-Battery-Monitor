@@ -1,3 +1,0 @@
-(fp_lib_table
-  (lib (name "NiCd Battery Tester")(type KiCad)(uri "${KIPRJMOD}/NiCd Battery Tester.pretty")(options "")(descr ""))
-)

@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name "NiCd Battery Tester")(type Legacy)(uri "C:/Users/riley/OneDrive/Documents/KiCAD/NiCd Power Supply/NiCd Battery Tester/NiCd Battery Tester/NiCd Battery Tester.lib")(options "")(descr ""))
-  (lib (name NiCd-Battery-Tester-PCB-Rev-3-rescue)(type Legacy)(uri "${KIPRJMOD}/NiCd Battery Tester PCB Rev 3-rescue.lib")(options "")(descr ""))
-)

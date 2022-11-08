@@ -1,0 +1,1510 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 2 4
+Title "NiCd Battery Tester"
+Date "2021-04-01"
+Rev "2A"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Amplifier_Operational:LM324A U1
+U 1 1 6078943D
+P 3500 1300
+F 0 "U1" H 3750 1400 50  0000 C CNN
+F 1 "LM324A" H 3750 1200 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 1400 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 1500 50  0001 C CNN
+	1    3500 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U1
+U 2 1 60789443
+P 3500 1950
+F 0 "U1" H 3750 2050 50  0000 C CNN
+F 1 "LM324A" H 3750 1850 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 2050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 2150 50  0001 C CNN
+	2    3500 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U1
+U 3 1 60789449
+P 3500 2600
+F 0 "U1" H 3750 2700 50  0000 C CNN
+F 1 "LM324A" H 3750 2500 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 2700 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 2800 50  0001 C CNN
+	3    3500 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U1
+U 4 1 6078944F
+P 3500 3250
+F 0 "U1" H 3750 3350 50  0000 C CNN
+F 1 "LM324A" H 3750 3150 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 3350 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 3450 50  0001 C CNN
+	4    3500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60789455
+P 2750 1400
+F 0 "R2" V 2850 1450 50  0000 R BNN
+F 1 "100K" V 2750 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 1400 50  0001 C CNN
+F 3 "~" H 2750 1400 50  0001 C CNN
+F 4 "C17900" H 2750 1400 50  0001 C CNN "LCSC"
+	1    2750 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 6078945B
+P 2750 1850
+F 0 "R3" V 2850 1900 50  0000 R BNN
+F 1 "100K" V 2750 1850 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 1850 50  0001 C CNN
+F 3 "~" H 2750 1850 50  0001 C CNN
+F 4 "C17900" H 2750 1850 50  0001 C CNN "LCSC"
+	1    2750 1850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 60789461
+P 2750 2050
+F 0 "R4" V 2850 2100 50  0000 R BNN
+F 1 "100K" V 2750 2050 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 2050 50  0001 C CNN
+F 3 "~" H 2750 2050 50  0001 C CNN
+F 4 "C17900" H 2750 2050 50  0001 C CNN "LCSC"
+	1    2750 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 60789467
+P 2750 2500
+F 0 "R5" V 2850 2550 50  0000 R BNN
+F 1 "100K" V 2750 2500 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 2500 50  0001 C CNN
+F 3 "~" H 2750 2500 50  0001 C CNN
+F 4 "C17900" H 2750 2500 50  0001 C CNN "LCSC"
+	1    2750 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 6078946D
+P 2750 2700
+F 0 "R6" V 2850 2750 50  0000 R BNN
+F 1 "100K" V 2750 2700 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 2700 50  0001 C CNN
+F 3 "~" H 2750 2700 50  0001 C CNN
+F 4 "C17900" H 2750 2700 50  0001 C CNN "LCSC"
+	1    2750 2700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 60789473
+P 2750 3150
+F 0 "R7" V 2850 3200 50  0000 R BNN
+F 1 "100K" V 2750 3150 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 3150 50  0001 C CNN
+F 3 "~" H 2750 3150 50  0001 C CNN
+F 4 "C17900" H 2750 3150 50  0001 C CNN "LCSC"
+	1    2750 3150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 60789479
+P 2750 3350
+F 0 "R8" V 2850 3400 50  0000 R BNN
+F 1 "100K" V 2750 3350 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 3350 50  0001 C CNN
+F 3 "~" H 2750 3350 50  0001 C CNN
+F 4 "C17900" H 2750 3350 50  0001 C CNN "LCSC"
+	1    2750 3350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U3
+U 1 1 6078947F
+P 3500 6500
+F 0 "U3" H 3750 6600 50  0000 C CNN
+F 1 "LM324A" H 3750 6400 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 6600 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 6700 50  0001 C CNN
+	1    3500 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U3
+U 2 1 60789485
+P 3500 7150
+F 0 "U3" H 3750 7250 50  0000 C CNN
+F 1 "LM324A" H 3750 7050 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 7250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 7350 50  0001 C CNN
+	2    3500 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 6078948B
+P 2750 6400
+F 0 "R17" V 2850 6450 50  0000 R BNN
+F 1 "100K" V 2750 6400 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 6400 50  0001 C CNN
+F 3 "~" H 2750 6400 50  0001 C CNN
+F 4 "C17900" H 2750 6400 50  0001 C CNN "LCSC"
+	1    2750 6400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R18
+U 1 1 60789491
+P 2750 6600
+F 0 "R18" V 2850 6650 50  0000 R BNN
+F 1 "100K" V 2750 6600 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 6600 50  0001 C CNN
+F 3 "~" H 2750 6600 50  0001 C CNN
+F 4 "C17900" H 2750 6600 50  0001 C CNN "LCSC"
+	1    2750 6600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 60789497
+P 2750 7050
+F 0 "R19" V 2850 7100 50  0000 R BNN
+F 1 "100K" V 2750 7050 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 7050 50  0001 C CNN
+F 3 "~" H 2750 7050 50  0001 C CNN
+F 4 "C17900" H 2750 7050 50  0001 C CNN "LCSC"
+	1    2750 7050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6078949E
+P 2750 1200
+F 0 "R1" V 2850 1250 50  0000 R BNN
+F 1 "100K" V 2750 1200 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 1200 50  0001 C CNN
+F 3 "https://www.digikey.ca/en/products/detail/te-connectivity-passive-product/CRG1206F100K/3477717" H 2750 1200 50  0001 C CNN
+F 4 "CRG1206F100K" V 2750 1200 50  0001 C CNN "P/N"
+F 5 "C17900" H 2750 1200 50  0001 C CNN "LCSC"
+	1    2750 1200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R23
+U 1 1 607894A4
+P 3050 1700
+F 0 "R23" V 3100 1550 50  0000 R BNN
+F 1 "100K" V 3050 1700 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 1700 50  0001 C CNN
+F 3 "~" H 3050 1700 50  0001 C CNN
+F 4 "C17900" H 3050 1700 50  0001 C CNN "LCSC"
+	1    3050 1700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R22
+U 1 1 607894AA
+P 3050 1600
+F 0 "R22" V 3100 1450 50  0000 R BNN
+F 1 "100K" V 3050 1600 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 1600 50  0001 C CNN
+F 3 "~" H 3050 1600 50  0001 C CNN
+F 4 "C17900" H 3050 1600 50  0001 C CNN "LCSC"
+	1    3050 1600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R21
+U 1 1 607894B0
+P 3050 1050
+F 0 "R21" V 3100 900 50  0000 R BNN
+F 1 "100K" V 3050 1050 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 1050 50  0001 C CNN
+F 3 "~" H 3050 1050 50  0001 C CNN
+F 4 "C17900" H 3050 1050 50  0001 C CNN "LCSC"
+	1    3050 1050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 607894B6
+P 3050 2350
+F 0 "R25" V 3100 2200 50  0000 R BNN
+F 1 "100K" V 3050 2350 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 2350 50  0001 C CNN
+F 3 "~" H 3050 2350 50  0001 C CNN
+F 4 "C17900" H 3050 2350 50  0001 C CNN "LCSC"
+	1    3050 2350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R24
+U 1 1 607894BC
+P 3050 2250
+F 0 "R24" V 3100 2100 50  0000 R BNN
+F 1 "100K" V 3050 2250 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 2250 50  0001 C CNN
+F 3 "~" H 3050 2250 50  0001 C CNN
+F 4 "C17900" H 3050 2250 50  0001 C CNN "LCSC"
+	1    3050 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R27
+U 1 1 607894C2
+P 3050 3000
+F 0 "R27" V 3100 2850 50  0000 R BNN
+F 1 "100K" V 3050 3000 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 3000 50  0001 C CNN
+F 3 "~" H 3050 3000 50  0001 C CNN
+F 4 "C17900" H 3050 3000 50  0001 C CNN "LCSC"
+	1    3050 3000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R26
+U 1 1 607894C8
+P 3050 2900
+F 0 "R26" V 3100 2750 50  0000 R BNN
+F 1 "100K" V 3050 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 2900 50  0001 C CNN
+F 3 "~" H 3050 2900 50  0001 C CNN
+F 4 "C17900" H 3050 2900 50  0001 C CNN "LCSC"
+	1    3050 2900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R29
+U 1 1 607894CE
+P 3050 3650
+F 0 "R29" V 3100 3500 50  0000 R BNN
+F 1 "100K" V 3050 3650 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 3650 50  0001 C CNN
+F 3 "~" H 3050 3650 50  0001 C CNN
+F 4 "C17900" H 3050 3650 50  0001 C CNN "LCSC"
+	1    3050 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R28
+U 1 1 607894D4
+P 3050 3550
+F 0 "R28" V 3100 3400 50  0000 R BNN
+F 1 "100K" V 3050 3550 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 3550 50  0001 C CNN
+F 3 "~" H 3050 3550 50  0001 C CNN
+F 4 "C17900" H 3050 3550 50  0001 C CNN "LCSC"
+	1    3050 3550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U2
+U 1 1 607894DA
+P 3500 3900
+F 0 "U2" H 3750 4000 50  0000 C CNN
+F 1 "LM324A" H 3750 3800 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 4000 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 4100 50  0001 C CNN
+	1    3500 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U2
+U 2 1 607894E0
+P 3500 4550
+F 0 "U2" H 3750 4650 50  0000 C CNN
+F 1 "LM324A" H 3750 4450 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 4750 50  0001 C CNN
+	2    3500 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U2
+U 3 1 607894E6
+P 3500 5200
+F 0 "U2" H 3750 5300 50  0000 C CNN
+F 1 "LM324A" H 3750 5100 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 5300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 5400 50  0001 C CNN
+	3    3500 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U2
+U 4 1 607894EC
+P 3500 5850
+F 0 "U2" H 3750 5950 50  0000 C CNN
+F 1 "LM324A" H 3750 5750 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3450 5950 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 3550 6050 50  0001 C CNN
+	4    3500 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 607894F2
+P 2750 4000
+F 0 "R10" V 2850 4050 50  0000 R BNN
+F 1 "100K" V 2750 4000 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 4000 50  0001 C CNN
+F 3 "~" H 2750 4000 50  0001 C CNN
+F 4 "C17900" H 2750 4000 50  0001 C CNN "LCSC"
+	1    2750 4000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 607894F8
+P 2750 4450
+F 0 "R11" V 2850 4500 50  0000 R BNN
+F 1 "100K" V 2750 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 4450 50  0001 C CNN
+F 3 "~" H 2750 4450 50  0001 C CNN
+F 4 "C17900" H 2750 4450 50  0001 C CNN "LCSC"
+	1    2750 4450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 607894FE
+P 2750 4650
+F 0 "R12" V 2850 4700 50  0000 R BNN
+F 1 "100K" V 2750 4650 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 4650 50  0001 C CNN
+F 3 "~" H 2750 4650 50  0001 C CNN
+F 4 "C17900" H 2750 4650 50  0001 C CNN "LCSC"
+	1    2750 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 60789504
+P 2750 5100
+F 0 "R13" V 2850 5150 50  0000 R BNN
+F 1 "100K" V 2750 5100 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 5100 50  0001 C CNN
+F 3 "~" H 2750 5100 50  0001 C CNN
+F 4 "C17900" H 2750 5100 50  0001 C CNN "LCSC"
+	1    2750 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 6078950A
+P 2750 5300
+F 0 "R14" V 2850 5350 50  0000 R BNN
+F 1 "100K" V 2750 5300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 5300 50  0001 C CNN
+F 3 "~" H 2750 5300 50  0001 C CNN
+F 4 "C17900" H 2750 5300 50  0001 C CNN "LCSC"
+	1    2750 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 60789510
+P 2750 5750
+F 0 "R15" V 2850 5800 50  0000 R BNN
+F 1 "100K" V 2750 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 5750 50  0001 C CNN
+F 3 "~" H 2750 5750 50  0001 C CNN
+F 4 "C17900" H 2750 5750 50  0001 C CNN "LCSC"
+	1    2750 5750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 60789516
+P 2750 5950
+F 0 "R16" V 2850 6000 50  0000 R BNN
+F 1 "100K" V 2750 5950 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 5950 50  0001 C CNN
+F 3 "~" H 2750 5950 50  0001 C CNN
+F 4 "C17900" H 2750 5950 50  0001 C CNN "LCSC"
+	1    2750 5950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 6078951C
+P 2750 3800
+F 0 "R9" V 2850 3850 50  0000 R BNN
+F 1 "100K" V 2750 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 3800 50  0001 C CNN
+F 3 "~" H 2750 3800 50  0001 C CNN
+F 4 "C17900" H 2750 3800 50  0001 C CNN "LCSC"
+	1    2750 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R31
+U 1 1 60789522
+P 3050 4300
+F 0 "R31" V 3100 4150 50  0000 R BNN
+F 1 "100K" V 3050 4300 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 4300 50  0001 C CNN
+F 3 "~" H 3050 4300 50  0001 C CNN
+F 4 "C17900" H 3050 4300 50  0001 C CNN "LCSC"
+	1    3050 4300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R30
+U 1 1 60789528
+P 3050 4200
+F 0 "R30" V 3100 4050 50  0000 R BNN
+F 1 "100K" V 3050 4200 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 4200 50  0001 C CNN
+F 3 "~" H 3050 4200 50  0001 C CNN
+F 4 "C17900" H 3050 4200 50  0001 C CNN "LCSC"
+	1    3050 4200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R33
+U 1 1 6078952E
+P 3050 4950
+F 0 "R33" V 3100 4800 50  0000 R BNN
+F 1 "100K" V 3050 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 4950 50  0001 C CNN
+F 3 "~" H 3050 4950 50  0001 C CNN
+F 4 "C17900" H 3050 4950 50  0001 C CNN "LCSC"
+	1    3050 4950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R32
+U 1 1 60789534
+P 3050 4850
+F 0 "R32" V 3100 4700 50  0000 R BNN
+F 1 "100K" V 3050 4850 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 4850 50  0001 C CNN
+F 3 "~" H 3050 4850 50  0001 C CNN
+F 4 "C17900" H 3050 4850 50  0001 C CNN "LCSC"
+	1    3050 4850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R35
+U 1 1 6078953A
+P 3050 5600
+F 0 "R35" V 3100 5450 50  0000 R BNN
+F 1 "100K" V 3050 5600 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 5600 50  0001 C CNN
+F 3 "~" H 3050 5600 50  0001 C CNN
+F 4 "C17900" H 3050 5600 50  0001 C CNN "LCSC"
+	1    3050 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R34
+U 1 1 60789540
+P 3050 5500
+F 0 "R34" V 3100 5350 50  0000 R BNN
+F 1 "100K" V 3050 5500 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 5500 50  0001 C CNN
+F 3 "~" H 3050 5500 50  0001 C CNN
+F 4 "C17900" H 3050 5500 50  0001 C CNN "LCSC"
+	1    3050 5500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R37
+U 1 1 60789546
+P 3050 6250
+F 0 "R37" V 3100 6100 50  0000 R BNN
+F 1 "100K" V 3050 6250 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 6250 50  0001 C CNN
+F 3 "~" H 3050 6250 50  0001 C CNN
+F 4 "C17900" H 3050 6250 50  0001 C CNN "LCSC"
+	1    3050 6250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R36
+U 1 1 6078954C
+P 3050 6150
+F 0 "R36" V 3100 6000 50  0000 R BNN
+F 1 "100K" V 3050 6150 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 6150 50  0001 C CNN
+F 3 "~" H 3050 6150 50  0001 C CNN
+F 4 "C17900" H 3050 6150 50  0001 C CNN "LCSC"
+	1    3050 6150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R39
+U 1 1 60789552
+P 3050 6900
+F 0 "R39" V 3100 6750 50  0000 R BNN
+F 1 "100K" V 3050 6900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 6900 50  0001 C CNN
+F 3 "~" H 3050 6900 50  0001 C CNN
+F 4 "C17900" H 3050 6900 50  0001 C CNN "LCSC"
+	1    3050 6900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R38
+U 1 1 60789558
+P 3050 6800
+F 0 "R38" V 3100 6650 50  0000 R BNN
+F 1 "100K" V 3050 6800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 6800 50  0001 C CNN
+F 3 "~" H 3050 6800 50  0001 C CNN
+F 4 "C17900" H 3050 6800 50  0001 C CNN "LCSC"
+	1    3050 6800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2900 1200 3200 1200
+Wire Wire Line
+	2900 1200 2900 1050
+Connection ~ 2900 1200
+Wire Wire Line
+	2900 1400 3200 1400
+Wire Wire Line
+	2900 1400 2900 1600
+Connection ~ 2900 1400
+Wire Wire Line
+	2900 1850 2900 1700
+Wire Wire Line
+	2900 1850 3200 1850
+Connection ~ 2900 1850
+Wire Wire Line
+	2900 2050 3200 2050
+Wire Wire Line
+	2900 2050 2900 2250
+Connection ~ 2900 2050
+Wire Wire Line
+	2600 1400 2550 1400
+Wire Wire Line
+	2550 1400 2550 1850
+Wire Wire Line
+	2550 1850 2600 1850
+Wire Wire Line
+	2600 2050 2550 2050
+Wire Wire Line
+	2550 2050 2550 2500
+Wire Wire Line
+	2550 2500 2600 2500
+Wire Wire Line
+	2900 2500 3200 2500
+Wire Wire Line
+	2900 2500 2900 2350
+Connection ~ 2900 2500
+Wire Wire Line
+	2900 2700 3200 2700
+Wire Wire Line
+	2900 2700 2900 2900
+Connection ~ 2900 2700
+Wire Wire Line
+	2600 2700 2550 2700
+Wire Wire Line
+	2550 2700 2550 3150
+Wire Wire Line
+	2550 3150 2600 3150
+Wire Wire Line
+	2900 3150 2900 3000
+Wire Wire Line
+	2900 3150 3200 3150
+Connection ~ 2900 3150
+Wire Wire Line
+	2900 3350 3200 3350
+Wire Wire Line
+	2900 3350 2900 3550
+Connection ~ 2900 3350
+Wire Wire Line
+	2600 3350 2550 3350
+Wire Wire Line
+	2550 3350 2550 3800
+Wire Wire Line
+	2550 3800 2600 3800
+Wire Wire Line
+	2900 3800 2900 3650
+Wire Wire Line
+	2900 3800 3200 3800
+Connection ~ 2900 3800
+Wire Wire Line
+	2900 4000 3200 4000
+Wire Wire Line
+	2600 4000 2550 4000
+Wire Wire Line
+	2550 4000 2550 4450
+Wire Wire Line
+	2550 4450 2600 4450
+Wire Wire Line
+	2900 4200 2900 4000
+Connection ~ 2900 4000
+Wire Wire Line
+	2900 4450 2900 4300
+Wire Wire Line
+	2900 4450 3200 4450
+Connection ~ 2900 4450
+Wire Wire Line
+	2900 4650 3200 4650
+Wire Wire Line
+	2900 4650 2900 4850
+Connection ~ 2900 4650
+Wire Wire Line
+	2600 4650 2550 4650
+Wire Wire Line
+	2550 4650 2550 5100
+Wire Wire Line
+	2550 5100 2600 5100
+Wire Wire Line
+	2900 5100 2900 4950
+Wire Wire Line
+	2900 5100 3200 5100
+Connection ~ 2900 5100
+Wire Wire Line
+	2900 5300 3200 5300
+Wire Wire Line
+	2600 5300 2550 5300
+Wire Wire Line
+	2900 5300 2900 5500
+Connection ~ 2900 5300
+Wire Wire Line
+	2550 5750 2600 5750
+Wire Wire Line
+	2550 5300 2550 5750
+Wire Wire Line
+	2900 5750 2900 5600
+Wire Wire Line
+	2900 5750 3200 5750
+Connection ~ 2900 5750
+Wire Wire Line
+	2900 5950 3200 5950
+Wire Wire Line
+	2900 5950 2900 6150
+Connection ~ 2900 5950
+Wire Wire Line
+	2600 5950 2550 5950
+Wire Wire Line
+	2550 5950 2550 6400
+Wire Wire Line
+	2550 6400 2600 6400
+Wire Wire Line
+	2900 6400 2900 6250
+Wire Wire Line
+	2900 6400 3200 6400
+Connection ~ 2900 6400
+Wire Wire Line
+	2900 6600 3200 6600
+Wire Wire Line
+	2900 6600 2900 6800
+Connection ~ 2900 6600
+Wire Wire Line
+	2600 6600 2550 6600
+Wire Wire Line
+	2550 6600 2550 7050
+Wire Wire Line
+	2550 7050 2600 7050
+Wire Wire Line
+	2900 7050 2900 6900
+Wire Wire Line
+	2900 7050 3200 7050
+Connection ~ 2900 7050
+Wire Wire Line
+	3200 1600 3950 1600
+Wire Wire Line
+	3950 1600 3950 1300
+Wire Wire Line
+	3950 1300 3800 1300
+Wire Wire Line
+	3200 2250 3950 2250
+Wire Wire Line
+	3950 2250 3950 1950
+Wire Wire Line
+	3950 1950 3800 1950
+Wire Wire Line
+	3200 2900 3950 2900
+Wire Wire Line
+	3950 2900 3950 2600
+Wire Wire Line
+	3950 2600 3800 2600
+Wire Wire Line
+	3200 3550 3950 3550
+Wire Wire Line
+	3950 3550 3950 3250
+Wire Wire Line
+	3950 3250 3800 3250
+Wire Wire Line
+	3200 4200 3950 4200
+Wire Wire Line
+	3950 4200 3950 3900
+Wire Wire Line
+	3950 3900 3800 3900
+Wire Wire Line
+	3200 4850 3950 4850
+Wire Wire Line
+	3950 4850 3950 4550
+Wire Wire Line
+	3950 4550 3800 4550
+Wire Wire Line
+	3200 5500 3950 5500
+Wire Wire Line
+	3950 5500 3950 5200
+Wire Wire Line
+	3950 5200 3800 5200
+Wire Wire Line
+	3200 6150 3950 6150
+Wire Wire Line
+	3950 6150 3950 5850
+Wire Wire Line
+	3950 5850 3800 5850
+Wire Wire Line
+	3200 6800 3950 6800
+Wire Wire Line
+	3950 6800 3950 6500
+Wire Wire Line
+	3950 6500 3800 6500
+$Comp
+L Device:R R40
+U 1 1 607895CD
+P 3050 7450
+F 0 "R40" V 3100 7300 50  0000 R BNN
+F 1 "100K" V 3050 7450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 7450 50  0001 C CNN
+F 3 "~" H 3050 7450 50  0001 C CNN
+F 4 "C17900" H 3050 7450 50  0001 C CNN "LCSC"
+	1    3050 7450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3950 7450 3950 7150
+Wire Wire Line
+	3950 7150 3800 7150
+Wire Wire Line
+	1850 1200 2600 1200
+Wire Wire Line
+	1750 3950 1850 3950
+Wire Wire Line
+	1750 4050 1950 4050
+Wire Wire Line
+	1950 1850 2550 1850
+Connection ~ 2550 1850
+Wire Wire Line
+	1750 4150 2050 4150
+Wire Wire Line
+	2050 2500 2550 2500
+Connection ~ 2550 2500
+Wire Wire Line
+	1750 4250 2150 4250
+Wire Wire Line
+	2150 3150 2550 3150
+Connection ~ 2550 3150
+Wire Wire Line
+	1750 4350 2250 4350
+Wire Wire Line
+	2250 3800 2550 3800
+Connection ~ 2550 3800
+Wire Wire Line
+	1750 4550 2250 4550
+Wire Wire Line
+	2250 5100 2550 5100
+Connection ~ 2550 5100
+Wire Wire Line
+	1750 4650 2150 4650
+Wire Wire Line
+	2150 5750 2550 5750
+Connection ~ 2550 5750
+Wire Wire Line
+	1750 4750 2050 4750
+Wire Wire Line
+	2050 6400 2550 6400
+Connection ~ 2550 6400
+Wire Wire Line
+	1750 4850 1950 4850
+Wire Wire Line
+	1950 7050 2550 7050
+Connection ~ 2550 7050
+Wire Wire Line
+	1750 4950 1850 4950
+Wire Wire Line
+	3200 1050 4050 1050
+Wire Wire Line
+	4050 1050 4050 1700
+Wire Wire Line
+	4050 1700 3200 1700
+Wire Wire Line
+	4050 1700 4050 2350
+Wire Wire Line
+	4050 2350 3200 2350
+Connection ~ 4050 1700
+Wire Wire Line
+	4050 2350 4050 3000
+Wire Wire Line
+	4050 3000 3200 3000
+Connection ~ 4050 2350
+Wire Wire Line
+	4050 3000 4050 3650
+Wire Wire Line
+	4050 3650 3200 3650
+Connection ~ 4050 3000
+Wire Wire Line
+	4050 3650 4050 4300
+Wire Wire Line
+	4050 4300 3200 4300
+Connection ~ 4050 3650
+Wire Wire Line
+	4050 4300 4050 4950
+Wire Wire Line
+	4050 4950 3200 4950
+Connection ~ 4050 4300
+Wire Wire Line
+	4050 4950 4050 5600
+Wire Wire Line
+	4050 5600 3200 5600
+Connection ~ 4050 4950
+Wire Wire Line
+	4050 5600 4050 6250
+Wire Wire Line
+	4050 6250 3200 6250
+Connection ~ 4050 5600
+Wire Wire Line
+	4050 6250 4050 6900
+Wire Wire Line
+	4050 6900 3200 6900
+Connection ~ 4050 6250
+Wire Wire Line
+	4250 3250 3950 3250
+Connection ~ 3950 3250
+Wire Wire Line
+	4350 2600 3950 2600
+Connection ~ 3950 2600
+Wire Wire Line
+	4450 1950 3950 1950
+Connection ~ 3950 1950
+Wire Wire Line
+	4550 1300 3950 1300
+Connection ~ 3950 1300
+Wire Wire Line
+	4250 4000 4250 4550
+Wire Wire Line
+	4250 4550 3950 4550
+Connection ~ 3950 4550
+Wire Wire Line
+	4350 4100 4350 5200
+Wire Wire Line
+	4350 5200 3950 5200
+Connection ~ 3950 5200
+Wire Wire Line
+	4450 4200 4450 5850
+Wire Wire Line
+	4450 5850 3950 5850
+Connection ~ 3950 5850
+Wire Wire Line
+	4550 4300 4550 6500
+Wire Wire Line
+	4550 6500 3950 6500
+Connection ~ 3950 6500
+Wire Wire Line
+	4650 4400 4650 7150
+Wire Wire Line
+	4650 7150 3950 7150
+Connection ~ 3950 7150
+Connection ~ 3950 3900
+Wire Wire Line
+	4050 6900 4050 7550
+Connection ~ 4050 6900
+Wire Wire Line
+	4050 7550 4750 7550
+$Comp
+L Device:Fuse_Small F1
+U 1 1 60789626
+P 1850 1500
+F 0 "F1" V 1804 1548 50  0000 L CNN
+F 1 "1A" V 1895 1548 50  0000 L CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 1850 1500 50  0001 C CNN
+F 3 "~" H 1850 1500 50  0001 C CNN
+	1    1850 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse_Small F3
+U 1 1 6078962C
+P 1950 2150
+F 0 "F3" V 1904 2198 50  0000 L CNN
+F 1 "1A" V 1995 2198 50  0000 L CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 1950 2150 50  0001 C CNN
+F 3 "~" H 1950 2150 50  0001 C CNN
+	1    1950 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse_Small F5
+U 1 1 60789632
+P 2050 2850
+F 0 "F5" V 2004 2898 50  0000 L CNN
+F 1 "1A" V 2095 2898 50  0000 L CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 2050 2850 50  0001 C CNN
+F 3 "~" H 2050 2850 50  0001 C CNN
+	1    2050 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse_Small F7
+U 1 1 60789638
+P 2150 3450
+F 0 "F7" V 2104 3498 50  0000 L CNN
+F 1 "1A" V 2195 3498 50  0000 L CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 2150 3450 50  0001 C CNN
+F 3 "~" H 2150 3450 50  0001 C CNN
+	1    2150 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse_Small F9
+U 1 1 6078963E
+P 2250 4100
+F 0 "F9" V 2204 4148 50  0000 L CNN
+F 1 "1A" V 2295 4148 50  0000 L CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 2250 4100 50  0001 C CNN
+F 3 "~" H 2250 4100 50  0001 C CNN
+	1    2250 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Fuse_Small F11
+U 1 1 60789644
+P 2350 4450
+F 0 "F11" H 2350 4265 50  0000 C CNN
+F 1 "1A" H 2350 4356 50  0000 C CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 2350 4450 50  0001 C CNN
+F 3 "~" H 2350 4450 50  0001 C CNN
+	1    2350 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Fuse_Small F10
+U 1 1 6078964A
+P 2250 4800
+F 0 "F10" V 2296 4752 50  0000 R CNN
+F 1 "1A" V 2205 4752 50  0000 R CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 2250 4800 50  0001 C CNN
+F 3 "~" H 2250 4800 50  0001 C CNN
+	1    2250 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Fuse_Small F8
+U 1 1 60789650
+P 2150 5400
+F 0 "F8" V 2196 5352 50  0000 R CNN
+F 1 "1A" V 2105 5352 50  0000 R CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 2150 5400 50  0001 C CNN
+F 3 "~" H 2150 5400 50  0001 C CNN
+	1    2150 5400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Fuse_Small F6
+U 1 1 60789656
+P 2050 6050
+F 0 "F6" V 2096 6002 50  0000 R CNN
+F 1 "1A" V 2005 6002 50  0000 R CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 2050 6050 50  0001 C CNN
+F 3 "~" H 2050 6050 50  0001 C CNN
+	1    2050 6050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Fuse_Small F4
+U 1 1 6078965C
+P 1950 6750
+F 0 "F4" V 1996 6702 50  0000 R CNN
+F 1 "1A" V 1905 6702 50  0000 R CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 1950 6750 50  0001 C CNN
+F 3 "~" H 1950 6750 50  0001 C CNN
+	1    1950 6750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:Fuse_Small F2
+U 1 1 60789662
+P 1850 7250
+F 0 "F2" V 1896 7202 50  0000 R CNN
+F 1 "3A" V 1805 7202 50  0000 R CNN
+F 2 "NiCd Battery Tester:1206_FUSE" H 1850 7250 50  0001 C CNN
+F 3 "~" H 1850 7250 50  0001 C CNN
+	1    1850 7250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1850 1200 1850 1400
+Wire Wire Line
+	1950 1850 1950 2050
+Wire Wire Line
+	1850 1600 1850 3950
+Wire Wire Line
+	2150 3350 2150 3150
+Wire Wire Line
+	2250 3800 2250 4000
+Wire Wire Line
+	1950 4050 1950 2250
+Wire Wire Line
+	2050 2500 2050 2750
+Wire Wire Line
+	2050 2950 2050 4150
+Wire Wire Line
+	2150 4250 2150 3550
+Wire Wire Line
+	2250 4350 2250 4200
+Wire Wire Line
+	1750 4450 2250 4450
+Wire Wire Line
+	2450 4450 2550 4450
+Connection ~ 2550 4450
+Wire Wire Line
+	2250 4550 2250 4700
+Wire Wire Line
+	2150 4650 2150 5300
+Wire Wire Line
+	2250 5100 2250 4900
+Wire Wire Line
+	2050 4750 2050 5950
+Wire Wire Line
+	2150 5750 2150 5500
+Wire Wire Line
+	1950 4850 1950 6650
+Wire Wire Line
+	2050 6400 2050 6150
+Wire Wire Line
+	1850 4950 1850 7150
+Wire Wire Line
+	1950 7050 1950 6850
+$Comp
+L Connector:TestPoint TP1
+U 1 1 6078967E
+P 3950 1300
+F 0 "TP1" H 3950 1500 50  0000 C CNN
+F 1 "1" H 3950 1350 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 1300 50  0001 C CNN
+F 3 "~" H 4150 1300 50  0001 C CNN
+	1    3950 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 60789684
+P 3950 1950
+F 0 "TP2" H 3950 2150 50  0000 C CNN
+F 1 "2" H 3950 2000 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 1950 50  0001 C CNN
+F 3 "~" H 4150 1950 50  0001 C CNN
+	1    3950 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP3
+U 1 1 6078968A
+P 3950 2600
+F 0 "TP3" H 3950 2800 50  0000 C CNN
+F 1 "3" H 3950 2650 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 2600 50  0001 C CNN
+F 3 "~" H 4150 2600 50  0001 C CNN
+	1    3950 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP4
+U 1 1 60789690
+P 3950 3250
+F 0 "TP4" H 3950 3450 50  0000 C CNN
+F 1 "4" H 3950 3300 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 3250 50  0001 C CNN
+F 3 "~" H 4150 3250 50  0001 C CNN
+	1    3950 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP5
+U 1 1 60789696
+P 3950 3900
+F 0 "TP5" H 3950 4100 50  0000 C CNN
+F 1 "5" H 3950 3950 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 3900 50  0001 C CNN
+F 3 "~" H 4150 3900 50  0001 C CNN
+	1    3950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP6
+U 1 1 6078969C
+P 3950 4550
+F 0 "TP6" H 3950 4750 50  0000 C CNN
+F 1 "6" H 3950 4600 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 4550 50  0001 C CNN
+F 3 "~" H 4150 4550 50  0001 C CNN
+	1    3950 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP7
+U 1 1 607896A2
+P 3950 5200
+F 0 "TP7" H 3950 5400 50  0000 C CNN
+F 1 "7" H 3950 5250 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 5200 50  0001 C CNN
+F 3 "~" H 4150 5200 50  0001 C CNN
+	1    3950 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP8
+U 1 1 607896A8
+P 3950 5850
+F 0 "TP8" H 3950 6050 50  0000 C CNN
+F 1 "8" H 3950 5900 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 5850 50  0001 C CNN
+F 3 "~" H 4150 5850 50  0001 C CNN
+	1    3950 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP9
+U 1 1 607896AE
+P 3950 6500
+F 0 "TP9" H 3950 6700 50  0000 C CNN
+F 1 "9" H 3950 6550 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 6500 50  0001 C CNN
+F 3 "~" H 4150 6500 50  0001 C CNN
+	1    3950 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP10
+U 1 1 607896B4
+P 3950 7150
+F 0 "TP10" H 3950 7350 50  0000 C CNN
+F 1 "10" H 3950 7200 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 4150 7150 50  0001 C CNN
+F 3 "~" H 4150 7150 50  0001 C CNN
+	1    3950 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 607896BA
+P 2750 7250
+F 0 "R20" V 2850 7300 50  0000 R BNN
+F 1 "100K" V 2750 7250 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2680 7250 50  0001 C CNN
+F 3 "~" H 2750 7250 50  0001 C CNN
+F 4 "C17900" H 2750 7250 50  0001 C CNN "LCSC"
+	1    2750 7250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2900 7250 2900 7450
+Wire Wire Line
+	2900 7250 3200 7250
+Connection ~ 2900 7250
+Wire Wire Line
+	3200 7450 3950 7450
+Wire Wire Line
+	4050 7550 2600 7550
+Wire Wire Line
+	1850 7350 1850 7550
+Connection ~ 4050 7550
+Wire Wire Line
+	2600 7250 2600 7550
+Connection ~ 2600 7550
+Wire Wire Line
+	2600 7550 1850 7550
+Text Label 4750 3500 0    50   ~ 0
+CELL1_VOLTAGE
+Text Label 4750 3600 0    50   ~ 0
+CELL2_VOLTAGE
+Text Label 4750 3700 0    50   ~ 0
+CELL3_VOLTAGE
+Text Label 4750 3800 0    50   ~ 0
+CELL4_VOLTAGE
+Text Label 4750 3900 0    50   ~ 0
+CELL5_VOLTAGE
+Text Label 4750 4000 0    50   ~ 0
+CELL6_VOLTAGE
+Text Label 4750 4100 0    50   ~ 0
+CELL7_VOLTAGE
+Text Label 4750 4200 0    50   ~ 0
+CELL8_VOLTAGE
+Text Label 4750 4300 0    50   ~ 0
+CELL9_VOLTAGE
+Text Label 4750 4400 0    50   ~ 0
+CELL10_VOLTAGE
+Text Label 2500 1200 1    50   ~ 0
+CELL1_FUSED
+Text Label 2500 1850 1    50   ~ 0
+CELL2_FUSED
+Text Label 2500 2500 1    50   ~ 0
+CELL3_FUSED
+Text Label 2500 3150 1    50   ~ 0
+CELL4_FUSED
+Text Label 2500 3800 1    50   ~ 0
+CELL5_FUSED
+Text Label 2500 4450 1    50   ~ 0
+CELL6_FUSED
+Text Label 2500 5100 1    50   ~ 0
+CELL7_FUSED
+Text Label 2500 5750 1    50   ~ 0
+CELL8_FUSED
+Text Label 2500 6400 1    50   ~ 0
+CELL9_FUSED
+Text Label 2500 7050 1    50   ~ 0
+CELL10_FUSED
+Text Label 1950 7550 0    50   ~ 0
+NEGATIVE_FUSED
+$Comp
+L Connector_Generic:Conn_01x15 J1
+U 1 1 607896E0
+P 1550 4650
+F 0 "J1" H 1550 5550 50  0000 C CNN
+F 1 "15 POS D-SUB" H 1550 5450 50  0000 C CNN
+F 2 "NiCd Battery Tester:ADAM_TECH_DA15-SL-25" H 1550 4650 50  0001 C CNN
+F 3 "https://www.digikey.ca/en/products/detail/adam-tech/DA15-SL-25/9832575" H 1550 4650 50  0001 C CNN
+F 4 "DA15-SL-25" H 1550 4650 50  0001 C CNN "P/N"
+	1    1550 4650
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 1750 5050
+NoConn ~ 1750 5150
+NoConn ~ 1750 5250
+NoConn ~ 1750 5350
+Wire Wire Line
+	4750 4500 4750 7550
+$Comp
+L power:GND #PWR0101
+U 1 1 607896EB
+P 5700 4600
+F 0 "#PWR0101" H 5700 4350 50  0001 C CNN
+F 1 "GND" H 5705 4427 50  0000 C CNN
+F 2 "" H 5700 4600 50  0001 C CNN
+F 3 "" H 5700 4600 50  0001 C CNN
+	1    5700 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3250 4250 3800
+Wire Wire Line
+	4350 2600 4350 3700
+Wire Wire Line
+	4450 1950 4450 3600
+Wire Wire Line
+	4550 1300 4550 3500
+Wire Wire Line
+	4750 4500 5700 4500
+Wire Wire Line
+	5700 4500 5700 4600
+Wire Wire Line
+	4550 3500 5700 3500
+Wire Wire Line
+	4450 3600 5700 3600
+Wire Wire Line
+	4350 3700 5700 3700
+Wire Wire Line
+	4250 3800 5700 3800
+Wire Wire Line
+	3950 3900 5700 3900
+Wire Wire Line
+	4250 4000 5700 4000
+Wire Wire Line
+	4350 4100 5700 4100
+Wire Wire Line
+	4450 4200 5700 4200
+Wire Wire Line
+	4550 4300 5700 4300
+Wire Wire Line
+	4650 4400 5700 4400
+Text GLabel 5700 3500 2    50   Input ~ 0
+A0
+Text GLabel 5700 3600 2    50   Input ~ 0
+A1
+Text GLabel 5700 3700 2    50   Input ~ 0
+A2
+Text GLabel 5700 3800 2    50   Input ~ 0
+A3
+Text GLabel 5700 3900 2    50   Input ~ 0
+A4
+Text GLabel 5700 4000 2    50   Input ~ 0
+A5
+Text GLabel 5700 4100 2    50   Input ~ 0
+A6
+Text GLabel 5700 4200 2    50   Input ~ 0
+A7
+Text GLabel 5700 4300 2    50   Input ~ 0
+A8
+Text GLabel 5700 4400 2    50   Input ~ 0
+A9
+$Comp
+L Amplifier_Operational:LM324A U?
+U 5 1 607A13F9
+P 8450 4350
+AR Path="/607A13F9" Ref="U?"  Part="5" 
+AR Path="/6067C8D1/607A13F9" Ref="U2"  Part="5" 
+F 0 "U2" V 8545 4350 50  0000 C CNN
+F 1 "LM324A" V 8454 4350 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 8400 4450 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8500 4550 50  0001 C CNN
+	5    8450 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U?
+U 5 1 607A13FF
+P 8450 4050
+AR Path="/607A13FF" Ref="U?"  Part="5" 
+AR Path="/6067C8D1/607A13FF" Ref="U1"  Part="5" 
+F 0 "U1" V 8545 4050 50  0000 C CNN
+F 1 "LM324A" V 8454 4050 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 8400 4150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8500 4250 50  0001 C CNN
+	5    8450 4050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Amplifier_Operational:LM324A U?
+U 5 1 607A1405
+P 8450 4650
+AR Path="/607A1405" Ref="U?"  Part="5" 
+AR Path="/6067C8D1/607A1405" Ref="U3"  Part="5" 
+F 0 "U3" V 8545 4650 50  0000 C CNN
+F 1 "LM324A" V 8454 4650 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 8400 4750 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2902-n.pdf" H 8500 4850 50  0001 C CNN
+	5    8450 4650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 607A140B
+P 8000 5050
+AR Path="/607A140B" Ref="C?"  Part="1" 
+AR Path="/6067C8D1/607A140B" Ref="C1"  Part="1" 
+F 0 "C1" H 8115 5096 50  0000 L CNN
+F 1 "0.1uF" H 8115 5005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8038 4900 50  0001 C CNN
+F 3 "~" H 8000 5050 50  0001 C CNN
+F 4 "C24497" H 8000 5050 50  0001 C CNN "LCSC"
+	1    8000 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 607A1411
+P 9350 4750
+AR Path="/607A1411" Ref="TP?"  Part="1" 
+AR Path="/6067C8D1/607A1411" Ref="TP11"  Part="1" 
+F 0 "TP11" H 9350 4950 50  0000 C CNN
+F 1 "GND" H 9350 4800 50  0000 L CNN
+F 2 "TestPoint:TestPoint_THTPad_D1.5mm_Drill0.7mm" H 9550 4750 50  0001 C CNN
+F 3 "~" H 9550 4750 50  0001 C CNN
+	1    9350 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 607A1417
+P 8450 5050
+AR Path="/607A1417" Ref="C?"  Part="1" 
+AR Path="/6067C8D1/607A1417" Ref="C2"  Part="1" 
+F 0 "C2" H 8565 5096 50  0000 L CNN
+F 1 "0.1uF" H 8565 5005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8488 4900 50  0001 C CNN
+F 3 "~" H 8450 5050 50  0001 C CNN
+F 4 "C24497" H 8450 5050 50  0001 C CNN "LCSC"
+	1    8450 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 607A141D
+P 8900 5050
+AR Path="/607A141D" Ref="C?"  Part="1" 
+AR Path="/6067C8D1/607A141D" Ref="C3"  Part="1" 
+F 0 "C3" H 9015 5096 50  0000 L CNN
+F 1 "0.1uF" H 9015 5005 50  0000 L CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 8938 4900 50  0001 C CNN
+F 3 "~" H 8900 5050 50  0001 C CNN
+F 4 "C24497" H 8900 5050 50  0001 C CNN "LCSC"
+	1    8900 5050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 4750 8150 4450
+Connection ~ 8150 4450
+Wire Wire Line
+	8150 4450 8150 4150
+Wire Wire Line
+	8150 4750 8150 4900
+Wire Wire Line
+	8150 4900 8000 4900
+Connection ~ 8150 4750
+Wire Wire Line
+	8150 4900 8450 4900
+Connection ~ 8150 4900
+Connection ~ 8450 4900
+Wire Wire Line
+	8450 4900 8900 4900
+Wire Wire Line
+	8000 5200 8450 5200
+Wire Wire Line
+	9350 5200 9350 4750
+Wire Wire Line
+	9350 4750 8750 4750
+Connection ~ 8450 5200
+Wire Wire Line
+	8450 5200 8900 5200
+Connection ~ 8900 5200
+Wire Wire Line
+	8900 5200 9350 5200
+Wire Wire Line
+	8750 4750 8750 4450
+Connection ~ 8750 4750
+Connection ~ 8750 4450
+Wire Wire Line
+	8750 4450 8750 4150
+Text GLabel 8050 4450 0    50   Input ~ 0
+9VDC_BUS
+Wire Wire Line
+	8050 4450 8150 4450
+$Comp
+L power:GND #PWR?
+U 1 1 607A143A
+P 9350 5200
+AR Path="/607A143A" Ref="#PWR?"  Part="1" 
+AR Path="/6067C8D1/607A143A" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 9350 4950 50  0001 C CNN
+F 1 "GND" H 9355 5027 50  0000 C CNN
+F 2 "" H 9350 5200 50  0001 C CNN
+F 3 "" H 9350 5200 50  0001 C CNN
+	1    9350 5200
+	1    0    0    -1  
+$EndComp
+Connection ~ 9350 5200
+Connection ~ 9350 4750
+$EndSCHEMATC

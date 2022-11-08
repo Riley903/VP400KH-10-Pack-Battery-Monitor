@@ -1,0 +1,34 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A 11000 8500
+encoding utf-8
+Sheet 1 4
+Title "NiCd BATTERY MONITOR SHIELD - VP400KH"
+Date "2021-06-24"
+Rev "1.1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 850  750  2150 1600
+U 607BD76F
+F0 "OP-AMPS" 50
+F1 "OP-AMPS.sch" 50
+$EndSheet
+$Sheet
+S 3300 750  2150 1600
+U 60829CC7
+F0 "MICROCONTROLLER" 50
+F1 "MICROCONTROLLER.sch" 50
+$EndSheet
+$Sheet
+S 5750 750  2150 1600
+U 6086926A
+F0 "POWER AND CONTROL" 50
+F1 "POWER AND CONTROL.sch" 50
+$EndSheet
+$EndSCHEMATC
