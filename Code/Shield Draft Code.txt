@@ -222,7 +222,7 @@ float GetVoltage(int AnalogInput, float comp) {
   }
 
    Average the total and calculate the voltage.
-  avg = tot  numReadings;
+  avg = tot  numReadings;`
   avg = avg  analogRef;
   avg = avg  1023;
 
