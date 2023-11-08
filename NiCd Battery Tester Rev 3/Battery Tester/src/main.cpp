@@ -17,12 +17,16 @@
 #include <LiquidCrystal_I2C.h>
 #include <SPI.h>
 #include <SD.h>
+#include <Adafruit_ADS1X15.h>
 
 
 File batfile;
 
 // Initialize the LCD display
 LiquidCrystal_I2C disp(0x27,20,4);
+
+//
+Adafruit_ADS1115 ads1115;	// Construct an ads1115 
 
 
 // The prescaler value and timer count determine the timer frequency and, consequently, its interrupt rate.
@@ -34,6 +38,7 @@ LiquidCrystal_I2C disp(0x27,20,4);
 
 float GetVoltage(int AnalogInput, float comp);
 void CellStatus (float CellVoltage, float CellHistory, int CellState, int g);
+void I2C_Scanner();
 
 // Initialize all the analog ports to be used, BV denotes Battery Voltage
 // int since the Arduino analog inputs are 10-bit ADCs (1023)
@@ -94,6 +99,8 @@ float current = 0;              // Current measurment placeholder
 int backlightEnable = HIGH;     // LCD Backlight variable
 int buzzerButton = HIGH;        // Buzzer toggle button placeholder
 int16_t adc0;                   // Placeholder for ADC0 channel of the ads1115 analog to digial converter
+bool record = false;            // placeholder for recording event    
+
 
 
 // Setup, runs once.
@@ -101,7 +108,7 @@ void setup() {
   
   // Initialize the LCD
   disp.init();
-  disp.setBacklight(LOW);
+  disp.setBacklight(HIGH);
 
   // Set the Analog Reference Voltage 
   analogReference(INTERNAL2V56);
@@ -148,6 +155,10 @@ void setup() {
     pinMode(CellIndications[i], OUTPUT);
     digitalWrite(CellIndications[i], LOW);
   }
+
+  // initialize the ads1115
+  ads1115.begin(0x48);  // Initialize ads1115 at address 0x49
+  ads1115.setGain(GAIN_TWOTHIRDS);  // 2/3x gain +/- 6.144V  (Voltage = ADS1115_Reported_Value/32767 *6.144)
   
   pinMode(displayBacklightEnable, INPUT);
   pinMode(RelayCont, OUTPUT);
@@ -159,6 +170,8 @@ void setup() {
 
 // Main loop.
 void loop() {
+
+  // I2C_Scanner();
 
   // Read the voltages at each analog input and store into a temporary array.
   for (int i = 0; i < 10; i = i + 1) {
@@ -173,12 +186,32 @@ void loop() {
     }
   }
 
-  // 
+  /* 
   for(int i = 0; i < 10; i = i+1){
     CellStatus(tempCellVoltages[i],cellVoltageHistory[i], CellStates[i], i);  
     Serial.print(CellStates[i]);
     Serial.print("\n");
   }
+  */
+
+  // Current Measurement
+  /* 
+  - Assuming we have an ACS712-30A with a reading characteristic of 66 mv/A that is centered at 2.5V.
+  - Assuming we have the ADS1115 16-bit analog reader set to single ended mode and 6.144V gain
+  - For Max negative current ADS1115 would output (0.5V / 6.144V) * 32768 = 2773
+  - For no current: The ACS712-30A would output 2.5V and the ADS1115 would output (2.5/6.144)*32768 = 13333
+  - For Max positive current ADS1115 would output (4.5V / 6.144V) * 32768 = 24000
+  - Thus to map the ADS1115 output to a current value:
+    2773 = -30A
+    13333 = 0A
+    24000 = +30A
+  For a rate of 353.78 units per Ampere from -30A to +30A
+  */
+ 
+  adc0 = ads1115.readADC_SingleEnded(0);
+  // Serial.print("AIN0: ");
+  // Serial.println(adc0);
+
 
 
   // Evaluate Total Battery Pack Voltage
@@ -187,48 +220,52 @@ void loop() {
     BatteryVolt = BatteryVolt + tempCellVoltages[k];
   }
 
-  Serial.print(Timer),Serial.print("\t");
+  // 
+
+  if(record == true){
+    Serial.print(Timer),Serial.print("\t");
 
   
-  // Print the values to the serial monitor. This will change to a SD card storage device.
-  batfile = SD.open("Battery.txt", FILE_WRITE);
-  Serial.print(BatteryVolt), Serial.print("\t");
-  batfile.print(Timer), batfile.print("\t");
-  batfile.print(BatteryVolt), batfile.print("\t");
-  batfile.print("curr"), batfile.print("\t");
-  for (int j = 0; j < 10; j = j + 1) {
-    temp = tempCellVoltages[j];
-    Serial.print(temp), Serial.print("\t");
-    batfile.print(temp), batfile.print("\t");
+    // Print the values to the serial monitor. This will change to a SD card storage device.
+    batfile = SD.open("Battery.txt", FILE_WRITE);
+    Serial.print(BatteryVolt), Serial.print("\t");
+    batfile.print(Timer), batfile.print("\t");
+    batfile.print(BatteryVolt), batfile.print("\t");
+    batfile.print("curr"), batfile.print("\t");
+    for (int j = 0; j < 10; j = j + 1) {
+      temp = tempCellVoltages[j];
+      Serial.print(temp), Serial.print("\t");
+      batfile.print(temp), batfile.print("\t");
+    }
+    Serial.println();
+    batfile.println();
+    batfile.close();
+
+    // backlightEnable = digitalRead(displayBacklightEnable);
+    // if (backlightEnable == HIGH){
+    //  disp.setBacklight(HIGH);
+    // }else disp.setBacklight(LOW);
+    
+    // Print the Values to the LCD Display
+    disp.setCursor(0,0), disp.print("B"), disp.setCursor(1,0),disp.print(BatteryVolt);
+    disp.setCursor(7,0), disp.print("C"), disp.setCursor(8,0),disp.print("curr");
+    disp.setCursor(13,0), disp.print("10:"), disp.setCursor(16,0), disp.print(tempCellVoltages[9]);
+    disp.setCursor(0,1), disp.print("9:"), disp.setCursor(2,1), disp.print(tempCellVoltages[8]);
+    disp.setCursor(7,1), disp.print("8:"), disp.setCursor(9,1), disp.print(tempCellVoltages[7]);
+    disp.setCursor(14,1), disp.print("7:"), disp.setCursor(16,1), disp.print(tempCellVoltages[6]);
+    disp.setCursor(0,2), disp.print("6:"), disp.setCursor(2,2), disp.print(tempCellVoltages[5]);
+    disp.setCursor(7,2), disp.print("5:"), disp.setCursor(9,2), disp.print(tempCellVoltages[4]);
+    disp.setCursor(14,2), disp.print("4:"), disp.setCursor(16,2), disp.print(tempCellVoltages[3]);
+    disp.setCursor(0,3), disp.print("3:"), disp.setCursor(2,3), disp.print(tempCellVoltages[2]);
+    disp.setCursor(7,3), disp.print("2:"), disp.setCursor(9,3), disp.print(tempCellVoltages[1]);
+    disp.setCursor(14,3), disp.print("1:"), disp.setCursor(16,3), disp.print(tempCellVoltages[0]);
+
+    // Delay since it is not required to measure the cell voltages at very high rates. Play with this number to suit requirements.
+    Timer = Timer+1;
+    record = false;
+    counter = counter + 1;
   }
-  Serial.println();
-  batfile.println();
-  batfile.close();
-
-  backlightEnable = digitalRead(displayBacklightEnable);
-  if (backlightEnable == HIGH){
-    disp.setBacklight(HIGH);
-  }else disp.setBacklight(LOW);
   
-  // Print the Values to the LCD Display
-  disp.setCursor(0,0), disp.print("B"), disp.setCursor(1,0),disp.print(BatteryVolt);
-  disp.setCursor(7,0), disp.print("C"), disp.setCursor(8,0),disp.print("curr");
-  disp.setCursor(13,0), disp.print("10:"), disp.setCursor(16,0), disp.print(tempCellVoltages[9]);
-  disp.setCursor(0,1), disp.print("9:"), disp.setCursor(2,1), disp.print(tempCellVoltages[8]);
-  disp.setCursor(7,1), disp.print("8:"), disp.setCursor(9,1), disp.print(tempCellVoltages[7]);
-  disp.setCursor(14,1), disp.print("7:"), disp.setCursor(16,1), disp.print(tempCellVoltages[6]);
-  disp.setCursor(0,2), disp.print("6:"), disp.setCursor(2,2), disp.print(tempCellVoltages[5]);
-  disp.setCursor(7,2), disp.print("5:"), disp.setCursor(9,2), disp.print(tempCellVoltages[4]);
-  disp.setCursor(14,2), disp.print("4:"), disp.setCursor(16,2), disp.print(tempCellVoltages[3]);
-  disp.setCursor(0,3), disp.print("3:"), disp.setCursor(2,3), disp.print(tempCellVoltages[2]);
-  disp.setCursor(7,3), disp.print("2:"), disp.setCursor(9,3), disp.print(tempCellVoltages[1]);
-  disp.setCursor(14,3), disp.print("1:"), disp.setCursor(16,3), disp.print(tempCellVoltages[0]);
-
-  // Delay since it is not required to measure the cell voltages at very high rates. Play with this number to suit requirements.
-  Timer = Timer+1;
-  delay(5000);
-
-  counter = counter + 1;
 } // End main loop
 
 
@@ -236,9 +273,9 @@ void loop() {
 ISR(TIMER1_COMPA_vect) { // This ISR will run every 1 second
   // Your code here to execute every second
   // This code should be quick and not use delay() or other blocking functions
-  Serial.println("Hello, Welcome to the ISR, Should appear every 1 second");
-  Serial.println();
-
+  // Serial.println("Hello, Welcome to the ISR, Should appear every 1 second");
+  // Serial.println();
+  record = true;
 }
 
 
@@ -304,3 +341,44 @@ void CellStatus (float CellVoltage, float CellHistory, int CellState, int g){
     // Serial.print(Cell Status);
 
 } // CellStatus
+
+// scan the I2C bus for devices and report the address.
+void I2C_Scanner(){
+  
+  byte error, address;
+  int nDevices;
+
+  Serial.println("Scanning...");
+
+  nDevices = 0;
+  for(address = 1; address < 127; address++ )
+  {
+    Wire.beginTransmission(address);
+    error = Wire.endTransmission();
+
+    if (error == 0)
+    {
+      Serial.print("I2C device found at address 0x");
+      if (address < 16)
+        Serial.print("0");
+
+      Serial.print(address,HEX);
+      Serial.println("  !");
+
+      nDevices++;
+    }
+    else if (error==4)
+    {
+      Serial.print("Unknown error at address 0x");
+      if (address < 16)
+        Serial.print("0");
+
+      Serial.println(address,HEX);
+    }
+  }
+
+  if (nDevices == 0)
+    Serial.println("No I2C devices found");
+  else
+    Serial.println("done");
+}
